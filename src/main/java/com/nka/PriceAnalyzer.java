@@ -11,11 +11,11 @@ import java.util.HashMap;
 import java.util.List;
 import java.util.Map;
 
-public class Logika {
+public class PriceAnalyzer {
     private static final DateTimeFormatter FORMATTER = DateTimeFormatter.ofPattern(Constants.DATE_TIME_FORMAT);
 
     public String getPriceInfo(Tickets tickets) {
-        if (tickets == null) {
+        if (tickets == null || tickets.getTicketList() == null || tickets.getTicketList().isEmpty()) {
             return null;
         }
 

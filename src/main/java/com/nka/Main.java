@@ -4,13 +4,12 @@ import com.google.gson.Gson;
 import com.nka.dto.Tickets;
 
 import java.io.IOException;
-import java.nio.charset.StandardCharsets;
 import java.nio.file.Files;
 import java.nio.file.Path;
 
 public class Main {
     public static void main(String[] args) {
-        Logika logika = new Logika();
+        PriceAnalyzer logika = new PriceAnalyzer();
         Gson gson = new Gson();
         try {
             byte[] file = Files.readAllBytes(Path.of(args[0]));
